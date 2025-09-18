@@ -1,0 +1,31 @@
+Условие: массив называют палиндромом, если он одинаково читается слева направо и справа налево. Проверить, является ли массив палиндромом.
+Ответ:
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Введите количество элементов: ";
+    cin >> n;
+
+    int arr[n];
+    cout << "Введите элементы массива:\n";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    bool isPalindrome = true;
+    for (int i = 0; i < n / 2; i++) {
+        if (arr[i] != arr[n - i - 1]) {
+            isPalindrome = false;
+            break;
+        }
+    }
+
+    if (isPalindrome)
+        cout << "Массив является палиндромом" << endl;
+    else
+        cout << "Массив НЕ является палиндромом" << endl;
+
+    return 0;
+}
