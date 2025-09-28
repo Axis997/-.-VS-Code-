@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+struct FibHeap {
+    vector<int> nodes;
+    void insert(int x) { nodes.push_back(x); }
+    int getMin() { return *min_element(nodes.begin(), nodes.end()); }
+};
+
+int main() {
+    FibHeap h; h.insert(7); h.insert(3); h.insert(1);
+    cout << "min=" << h.getMin() << "\n";
+}
