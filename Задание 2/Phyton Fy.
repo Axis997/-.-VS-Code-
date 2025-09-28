@@ -1,0 +1,9 @@
+class FibHeap:
+    def __init__(self): self.nodes = []
+    def insert(self, x): self.nodes.append(x)
+    def get_min(self): return min(self.nodes)
+
+h = FibHeap()
+for x in [7, 3, 1]:
+    h.insert(x)
+print("min=", h.get_min())
