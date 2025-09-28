@@ -1,0 +1,15 @@
+import java.util.*;
+
+class FibHeap {
+    List<Integer> nodes = new ArrayList<>();
+    void insert(int x) { nodes.add(x); }
+    int getMin() { return Collections.min(nodes); }
+}
+
+public class FibDemo {
+    public static void main(String[] args) {
+        FibHeap h = new FibHeap();
+        h.insert(7); h.insert(3); h.insert(1);
+        System.out.println("min=" + h.getMin());
+    }
+}
