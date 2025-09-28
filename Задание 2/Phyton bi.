@@ -1,1 +1,9 @@
+class BinomialHeap:
+    def __init__(self): self.roots = []
+    def insert(self, x): self.roots.append({"key": x})
+    def get_min(self): return min(r["key"] for r in self.roots)
 
+h = BinomialHeap()
+for x in [10, 3, 7, 1]:
+    h.insert(x)
+print("min=", h.get_min())
