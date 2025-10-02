@@ -1,0 +1,7 @@
+table = {"apple": 10, "banana": 20}
+
+print(table["apple"])       # 10
+print("banana" in table)    # True
+
+del table["apple"]
+print(table)   
