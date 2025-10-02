@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    unordered_map<string,int> mp;
+    mp["apple"] = 10;
+    mp["banana"] = 20;
+
+    cout << mp["apple"] << "\n";              // 10
+    cout << (mp.count("banana") ? "Yes" : "No") << "\n"; // Yes
+
+    mp.erase("apple");
+    for (auto &p : mp) cout << p.first << ":" << p.second << " ";
+}
